@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-int main() {
+void SameChar(){
 	int N;
 	string word; //  N개의 단어들
 	vector<string> words;
@@ -42,5 +42,4 @@ int main() {
 	}
 
 	cout << answer;
-	return 0;
 }
