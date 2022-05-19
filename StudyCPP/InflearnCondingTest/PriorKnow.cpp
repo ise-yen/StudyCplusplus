@@ -129,7 +129,3 @@ void STLSet() {
 		cout << "3은 set에 있습니다." << endl;
 	}
 }
-
-int main() {
-	STLSet();
-}
