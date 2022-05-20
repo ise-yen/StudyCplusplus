@@ -43,3 +43,36 @@ void SameChar(){
 
 	cout << answer;
 }
+
+// 시간초과
+void Timeout_WatchMovie() {
+	int N;
+	vector<int> heights;
+	heights.push_back(0); // 0번 자리는 패스
+	cin >> N;
+	
+	// 1번부터 N번까지의 학생들
+	for (int i = 1; i <= N; i++) {
+		int h;
+		cin >> h;
+		heights.push_back(h);
+	}
+
+	vector<int> res; // 출력할 값
+	for (auto& i : heights) res.push_back(0); // heights의 크기만큼(==학생수) 0으로 초기화
+
+	// 앞 자리 중 키가 더 큰 학생의 위치 찾기
+	for (int i = N; i > 0; i--) {
+		for (int pos = i-1; pos > 0; pos--) {
+			if (heights[i] < heights[pos]) {
+				res[i] = pos;
+				break;
+			}
+		}
+	}
+
+	for (int i = 1; i <= N; i++) {
+		cout << res[i] << " ";
+	}
+}
+

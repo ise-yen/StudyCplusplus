@@ -21,5 +21,8 @@
     <ClCompile Include="PriorKnow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Week1Answer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
