@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <string>
 #include <vector>
 using namespace std;
@@ -44,6 +44,25 @@ void SameChar(){
 	cout << answer;
 }
 
+void OrangeTree() {
+	int W, H, T, S; // 땅 크기 가로, 세로, 오렌지 개수, 현수의 영지 크기(정사각형)
+	// 3 <= w, h <= 100,000
+	// 1 <= t <= 100
+	// 1 <= s <= w, h
+	vector<vector<int>> trees;
+
+	cin >> W >> H >> T >> S;
+
+	for (int i = 0; i < T; i++) {
+		vector<int> treePos;
+		int x, y;
+		cin >> x >> y;
+		treePos.push_back(x);
+		treePos.push_back(y);
+		trees.push_back(treePos);
+	}
+}
+
 // 시간초과
 void Timeout_WatchMovie() {
 	int N;
@@ -75,4 +94,3 @@ void Timeout_WatchMovie() {
 		cout << res[i] << " ";
 	}
 }
-
