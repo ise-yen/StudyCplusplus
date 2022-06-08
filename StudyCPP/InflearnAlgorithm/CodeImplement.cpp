@@ -21,9 +21,23 @@ void two_SumNumber() {
 	cout << " = " << sum;
 }
 
-void answer() {
-
+void three_SumDivisor() {
+	int n, sum{};
+	cin >> n;
+	for (int i = 1; i < n; i++) {
+		if (n % i == 0) {
+			if (i == 1) cout << i;
+			else cout << " + " << i;
+			sum += i;
+		}
+	}
+	cout << " = " << sum;
 }
+
+void four_DisAge() {
+	
+}
+
 int main() {
-	answer();
+	four_DisAge();
 }
