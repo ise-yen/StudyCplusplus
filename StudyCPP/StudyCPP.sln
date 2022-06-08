@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StudyCPP", "StudyCPP\StudyC
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InflearnCondingTest", "InflearnCondingTest\InflearnCondingTest.vcxproj", "{BEF6959F-4CE4-4991-BF95-CC5108E44F4E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InflearnAlgorithm", "InflearnAlgorithm\InflearnAlgorithm.vcxproj", "{1194D5E8-00EF-4119-BB0A-DCB87BFBA53E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{BEF6959F-4CE4-4991-BF95-CC5108E44F4E}.Release|x64.Build.0 = Release|x64
 		{BEF6959F-4CE4-4991-BF95-CC5108E44F4E}.Release|x86.ActiveCfg = Release|Win32
 		{BEF6959F-4CE4-4991-BF95-CC5108E44F4E}.Release|x86.Build.0 = Release|Win32
+		{1194D5E8-00EF-4119-BB0A-DCB87BFBA53E}.Debug|x64.ActiveCfg = Debug|x64
+		{1194D5E8-00EF-4119-BB0A-DCB87BFBA53E}.Debug|x64.Build.0 = Debug|x64
+		{1194D5E8-00EF-4119-BB0A-DCB87BFBA53E}.Debug|x86.ActiveCfg = Debug|Win32
+		{1194D5E8-00EF-4119-BB0A-DCB87BFBA53E}.Debug|x86.Build.0 = Debug|Win32
+		{1194D5E8-00EF-4119-BB0A-DCB87BFBA53E}.Release|x64.ActiveCfg = Release|x64
+		{1194D5E8-00EF-4119-BB0A-DCB87BFBA53E}.Release|x64.Build.0 = Release|x64
+		{1194D5E8-00EF-4119-BB0A-DCB87BFBA53E}.Release|x86.ActiveCfg = Release|Win32
+		{1194D5E8-00EF-4119-BB0A-DCB87BFBA53E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
