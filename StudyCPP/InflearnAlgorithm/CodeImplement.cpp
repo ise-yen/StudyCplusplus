@@ -14,9 +14,11 @@ void two_SumNumber() {
 	int a, b, sum{};
 	cin >> a >> b;
 	for (int i = a; i <= b; i++) {
+		cout << i;
+		if (i != b) cout << " + ";
 		sum += i;
 	}
-	cout << sum;
+	cout << " = " << sum;
 }
 
 void answer() {
