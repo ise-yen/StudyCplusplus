@@ -35,7 +35,22 @@ void three_SumDivisor() {
 }
 
 void four_DisAge() {
-	
+	int n;
+	cin >> n;
+	int max{}, min{};
+	for (int i = 0; i < n; i++) {
+		int tmp{};
+		cin >> tmp;
+		if (i == 0) {
+			max = tmp;
+			min = tmp;
+		}
+		else {
+			if (tmp > max) max = tmp;
+			if (tmp < min) min = tmp;
+		}
+	}
+	cout << max - min;
 }
 
 int main() {
