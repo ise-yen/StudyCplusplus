@@ -35,6 +35,8 @@ void three_SumDivisor() {
 }
 
 void four_DisAge() {
+	FILE* stream;
+	freopen_s(&stream, "input.txt.", "r", stdin);
 	int n;
 	cin >> n;
 	int max{}, min{};
@@ -53,6 +55,39 @@ void four_DisAge() {
 	cout << max - min;
 }
 
+void five_CalAge() {
+	string securityNum;
+	int year;
+
+	cin >> securityNum;
+	year = (securityNum[0] - '0') * 10 + securityNum[1] - '0';
+
+	int age{};
+	char gender{};
+	switch (securityNum[7])
+	{
+		case '1':
+			gender = 'M';
+			age = 2019 - (1900 + year) + 1;
+			break;
+		case '2':
+			gender = 'W';
+			age = 2019 - (1900 + year) + 1;
+			break;
+		case '3':
+			gender = 'M';
+			age = 2019 - (2000 + year) + 1;
+			break;
+		case '4':
+			gender = 'W';
+			age = 2019 - (2000 + year) + 1;
+			break;
+		default:
+			break;
+	}
+	cout << age << " " << gender;
+}
+
 int main() {
-	four_DisAge();
+	five_CalAge();
 }
