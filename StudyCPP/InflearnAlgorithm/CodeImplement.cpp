@@ -1,4 +1,5 @@
 #include<iostream>
+#include<stdio.h>
 using namespace std;
 
 void one_multiplier() {
@@ -56,11 +57,15 @@ void four_DisAge() {
 }
 
 void five_CalAge() {
-	string securityNum;
-	int year;
+	FILE* stream;
+	freopen_s(&stream, "input.txt.", "r", stdin);
 
-	cin >> securityNum;
-	year = (securityNum[0] - '0') * 10 + securityNum[1] - '0';
+	char securityNum[15];
+	int birthyear;
+	int year = 2019;
+
+	scanf_s("%s", &securityNum, sizeof(securityNum));
+	birthyear = (securityNum[0] - '0') * 10 + securityNum[1] - '0';
 
 	int age{};
 	char gender{};
@@ -68,24 +73,24 @@ void five_CalAge() {
 	{
 		case '1':
 			gender = 'M';
-			age = 2019 - (1900 + year) + 1;
+			age = year - (1900 + birthyear) + 1;
 			break;
 		case '2':
 			gender = 'W';
-			age = 2019 - (1900 + year) + 1;
+			age = year - (1900 + birthyear) + 1;
 			break;
 		case '3':
 			gender = 'M';
-			age = 2019 - (2000 + year) + 1;
+			age = year - (2000 + birthyear) + 1;
 			break;
 		case '4':
 			gender = 'W';
-			age = 2019 - (2000 + year) + 1;
+			age = year - (2000 + birthyear) + 1;
 			break;
 		default:
 			break;
 	}
-	cout << age << " " << gender;
+	printf("%d %c", age, gender);
 }
 
 int main() {
