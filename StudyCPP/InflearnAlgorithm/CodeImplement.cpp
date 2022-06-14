@@ -93,6 +93,53 @@ void five_CalAge() {
 	printf("%d %c", age, gender);
 }
 
+void six_ExtractNum() {
+	//FILE* stream;
+	//freopen_s(&stream, "input.txt", "r", stdin);
+	string str;
+	cin >> str;
+
+	int n = 0;
+	int cnt = 0;
+	int unit = 1;
+	for (int i = str.length()-1; i >= 0; i--) {
+		if (str[i] >= '0' && str[i] <= '9') {
+			if (cnt == 0) n += str[i] - '0';
+			else {
+				unit *= 10;
+				n += (str[i] - '0') * (unit);
+			}
+			cnt++;
+		}
+	}
+
+	int divisorCnt = 0;
+	for (int i = 1; i <= n; i++) {
+		if (n % i == 0) divisorCnt++;
+	}
+	printf("%d\n%d", n, divisorCnt);
+}
+
+void answer_six_ExtractNum() {
+	//FILE* stream;
+	//freopen_s(&stream, "input.txt", "r", stdin);
+	char str[100];
+	int res = 0, cnt = 0;
+	scanf_s("%s", &str, sizeof(str));
+
+	for (int i = 0; str[i] != '\0'; i++) {
+		if (str[i] >= '0' && str[i] <= '9') {
+			res = res * 10 + (str[i] - '0');
+		}
+	}
+
+	int divisorCnt = 0;
+	for (int i = 1; i <= res; i++) {
+		if (res % i == 0) divisorCnt++;
+	}
+	printf("%d\n%d", res, divisorCnt);
+}
+
 int main() {
-	five_CalAge();
+	six_ExtractNum();
 }
