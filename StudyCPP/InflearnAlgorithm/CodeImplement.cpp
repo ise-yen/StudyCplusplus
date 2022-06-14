@@ -1,5 +1,6 @@
 #include<iostream>
 #include<stdio.h>
+#include<string> //getline
 using namespace std;
 
 void one_multiplier() {
@@ -140,6 +141,39 @@ void answer_six_ExtractNum() {
 	printf("%d\n%d", res, divisorCnt);
 }
 
+void seven_RestoreWord() {
+	//FILE* stream;
+	//freopen_s(&stream, "input.txt", "r", stdin);
+	string str;
+	getline(cin, str);
+	string res;
+	for (int i = 0; i < str.length(); i++) {
+		if (str[i] != ' ') {
+			if(str[i] >= 'A' && str[i] <= 'Z') res.push_back(str[i] + ('a' - 'A'));
+			else res.push_back(str[i]);
+		}
+	}
+	cout << res;
+}
+
+void answer_seven_RestoreWord() {
+	FILE* stream;
+	freopen_s(&stream, "input.txt", "r", stdin);
+	//char str[101] = { 0 }, res[101] = { 0 };
+	char str[101], res[101];
+	gets_s(str, sizeof(str));
+	int pos = 0;
+	
+	for (int i = 0; i != '/0'; i++) {
+		if (str[i] != ' ') {
+			if (str[i] >= 'A' && str[i] <= 'Z') res[pos++] = str[i] + 32; // pos++ : res[pos]에 대입 후 pos += 1;
+			else if(str[i] >= 'a' && str[i] <= 'z') res[pos++] = str[i];
+			else {}
+		}
+	}
+	res[pos] = '/0';
+	printf("%s", res);
+}
+
 int main() {
-	six_ExtractNum();
 }
