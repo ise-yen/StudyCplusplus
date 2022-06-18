@@ -175,5 +175,24 @@ void answer_seven_RestoreWord() {
 	printf("%s", res);
 }
 
+void eight_CorrectParenthesis() {
+	//FILE* stream;
+	//freopen_s(&stream, "input.txt", "r", stdin);
+
+	string str;
+	getline(cin, str);
+	
+	int cnt_leftParen{}, cnt_rightParen{};
+	for (int i = 0; i < str.length(); i++) {
+		if (str[i] == '(') cnt_leftParen++;
+		else if (str[i] == ')') cnt_rightParen++;
+		else{}
+	}
+
+	if (cnt_leftParen == cnt_rightParen) printf("YES");
+	else printf("NO");
+}
+
 int main() {
+	eight_CorrectParenthesis();
 }
