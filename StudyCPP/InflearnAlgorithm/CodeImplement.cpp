@@ -182,15 +182,39 @@ void eight_CorrectParenthesis() {
 	string str;
 	getline(cin, str);
 	
-	int cnt_leftParen{}, cnt_rightParen{};
+	int cntParen{};
+	bool isStartL = true;
 	for (int i = 0; i < str.length(); i++) {
-		if (str[i] == '(') cnt_leftParen++;
-		else if (str[i] == ')') cnt_rightParen++;
-		else{}
+		if (cntParen == 0) {
+			if (str[i] == '(') {
+				isStartL = true;
+				cntParen++;
+			}
+			else if (str[i] == ')') {
+				isStartL = false;
+				cntParen--;
+				break;
+			}
+			else {}
+		}
+		else {
+			if (str[i] == '(') cntParen++;
+			else if (str[i] == ')') cntParen--;
+			else {}
+		}
 	}
 
-	if (cnt_leftParen == cnt_rightParen) printf("YES");
-	else printf("NO");
+	if (isStartL) {
+		if (cntParen == 0) printf("YES");
+		else printf("NO");
+	}
+	else {
+		printf("NO");
+	}
+}
+
+void answerStack_eight_CorrectParenthesis() {
+
 }
 
 int main() {
