@@ -217,6 +217,22 @@ void answerStack_eight_CorrectParenthesis() {
 
 }
 
+void nine_DivisorOfAll() {
+	//FILE* stream;
+	//freopen_s(&stream, "input.txt", "r", stdin);
+	int N = 0;
+	scanf_s("%d", &N, sizeof(N));
+	for (int i = 1; i <= N; i++) {
+		int res = 0;
+		for (int j = 1; j < i; j++) {
+			if (i % j == 0) res++;
+		}
+		res++;
+		printf("%d ", res);
+		res = 0;
+	}
+}
+
 int main() {
-	eight_CorrectParenthesis();
+	nine_DivisorOfAll();
 }
