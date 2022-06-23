@@ -1,6 +1,7 @@
 #include<iostream>
 #include<stdio.h>
 #include<string> //getline
+#include<vector>
 using namespace std;
 
 void one_multiplier() {
@@ -217,6 +218,7 @@ void answerStack_eight_CorrectParenthesis() {
 
 }
 
+// 시간 초과 발생 (: 조건 1초 이내)
 void nine_DivisorOfAll() {
 	//FILE* stream;
 	//freopen_s(&stream, "input.txt", "r", stdin);
@@ -233,6 +235,22 @@ void nine_DivisorOfAll() {
 	}
 }
 
+int res[50001];
+void answer_nine_DivisorOfAll() {
+	//FILE* stream;
+	//freopen_s(&stream, "input.txt", "r", stdin);
+	int N = 0;
+	scanf_s("%d", &N, sizeof(N));
+
+	for (int i = 1; i <= N; i++) {
+		// j의 배수로 for문
+		for (int j = i; j <= N; j = j+i) {
+			res[j]++;
+		}
+		printf("%d ", res[i]);
+	}
+}
+
 int main() {
-	nine_DivisorOfAll();
+	answer_nine_DivisorOfAll();
 }
