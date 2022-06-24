@@ -252,6 +252,16 @@ void answer_nine_DivisorOfAll() {
 }
 
 
+int answer_digit_sum(int x) {
+	int sum{}, tmp{};
+	while (x > 0) {
+		tmp = x % 10;
+		sum += tmp;
+		x = x / 10;
+	}
+	return sum;
+}
+
 int digit_sum(int x) {
 	int sum{};
 	string xToStr = to_string(x);
