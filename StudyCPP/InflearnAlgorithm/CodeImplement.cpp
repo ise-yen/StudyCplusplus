@@ -251,6 +251,42 @@ void answer_nine_DivisorOfAll() {
 	}
 }
 
+
+int digit_sum(int x) {
+	int sum{};
+	string xToStr = to_string(x);
+	for (int i = 0; i < xToStr.length(); i++) {
+		sum += xToStr[i] - '0';
+	}
+	return sum;
+}
+
+void ten_SumOfDigit() {
+	//FILE* stream;
+	//freopen_s(&stream, "input.txt", "r", stdin);
+	int N;
+	scanf_s("%d", &N, sizeof(N));
+	int max{};
+	int res{};
+	for (int i = 0; i < N; i++)
+	{
+		int num{}, sum{};
+		scanf_s("%d", &num, sizeof(num));
+		sum = digit_sum(num);
+
+		if (max < sum) {
+			max = sum;
+			res = num;
+		}
+		else if (max == sum) {
+			if (res < num) res = num;
+		}
+		else {}
+	}
+
+	printf("%d", res);
+}
+
 int main() {
-	answer_nine_DivisorOfAll();
+	ten_SumOfDigit();
 }
