@@ -297,6 +297,29 @@ void ten_SumOfDigit() {
 	printf("%d", res);
 }
 
+void answer_oneone_TotalNum() {
+	//FILE* stream;
+	//freopen_s(&stream, "input.txt", "r", stdin);
+	int N{}, res{};
+	scanf_s("%d", &N, sizeof(N));
+	if (N < 10) res = N;
+	else {
+		res += 9;
+		for (int i = 10; i <= N; i++) {
+			int cnt{};
+			int tmp = i;
+			while (tmp > 0) {
+				tmp /= 10;
+				cnt++;
+			}
+			res += cnt;
+		}
+	}
+
+	printf("%d", res);
+}
+
+
 int main() {
-	ten_SumOfDigit();
+	answer_oneone_TotalNum();
 }
