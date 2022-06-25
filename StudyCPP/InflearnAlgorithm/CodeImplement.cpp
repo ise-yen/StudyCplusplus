@@ -351,6 +351,29 @@ void answer_TotalNum_12() {
 	printf("%d", res);
 }
 
+void MostUsedDigits_13() {
+	//FILE* stream;
+	//freopen_s(&stream, "input.txt", "r", stdin);
+	int usedNum[10] = {};
+	string strN{};
+	cin >> strN;
+
+	int res{}, max{};
+
+	for (int i = 0; i < strN.length(); i++) {
+		usedNum[strN[i] - '0']++;
+	}
+
+	for (int i = 0; i < 10; i++) {
+		if (usedNum[i] >= max) {
+			max = usedNum[i];
+			res = i;
+		}
+	}
+	printf("%d", res);
+}
+
+
 int main() {
-	answer_TotalNum_12();
+	MostUsedDigits_13();
 }
