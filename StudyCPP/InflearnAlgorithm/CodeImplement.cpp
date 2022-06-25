@@ -297,7 +297,7 @@ void SumOfDigit_10() {
 	printf("%d", res);
 }
 
-void answer_TotalNum_10() {
+void answer_TotalNum_11() {
 	//FILE* stream;
 	//freopen_s(&stream, "input.txt", "r", stdin);
 	int N{}, res{};
@@ -319,7 +319,26 @@ void answer_TotalNum_10() {
 	printf("%d", res);
 }
 
+void TotalNum_12() {
+	//FILE* stream;
+	//freopen_s(&stream, "input.txt", "r", stdin);
+	int N{}, res{};
+	scanf_s("%d", &N, sizeof(N));
+	
+	string n = to_string(N);
+	int digit = n.length();
+	int min = pow(10, digit - 1);
+	if (digit == 1) res = N;
+	else {
+		for (int i = 1; i < digit; i++) {
+			res += (pow(10, i) - pow(10, i - 1)) * i;
+		}
+		res += (N - min + 1) * digit;
+	}
+	printf("%d", res);
+}
+
 
 int main() {
-	answer_oneone_TotalNum();
+	TotalNum_12();
 }
