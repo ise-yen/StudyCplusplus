@@ -373,7 +373,37 @@ void MostUsedDigits_13() {
 	printf("%d", res);
 }
 
+int reverse(int x) {
+	int revX{};
+	string strX = to_string(x);
+	std::reverse(strX.begin(), strX.end());
+	revX = atoi(strX.c_str());
+	return revX;
+}
+
+bool isPrime(int x) {
+	bool res = true;
+	for (int i = 2; i < x / 2 + 1; i++) {
+		if (x % i == 0) res = false;
+	}
+	return res;
+}
+
+void InvertedPrime_14() {
+	//FILE* stream;
+	//freopen_s(&stream, "input.txt", "r", stdin);
+	int N{};
+	scanf_s("%d", &N);
+
+	for (int i = 0; i < N; i++) {
+		int num{};
+		scanf_s("%d", &num);
+		int revX = reverse(num);
+		if (revX != 1 && isPrime(revX)) printf("%d ", revX);
+	}
+}
+
 
 int main() {
-	MostUsedDigits_13();
+	InvertedPrime_14();
 }
