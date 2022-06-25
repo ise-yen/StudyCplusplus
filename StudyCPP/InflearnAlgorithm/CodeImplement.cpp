@@ -4,7 +4,7 @@
 #include<vector>
 using namespace std;
 
-void one_multiplier() {
+void multiplier_01() {
 	int N{}, M{}, sum{};
 	cin >> N >> M;
 	for (int i = 1; i <= N; i++) {
@@ -13,7 +13,7 @@ void one_multiplier() {
 	cout << sum;
 }
 
-void two_SumNumber() {
+void SumNumber_02() {
 	int a, b, sum{};
 	cin >> a >> b;
 	for (int i = a; i <= b; i++) {
@@ -24,7 +24,7 @@ void two_SumNumber() {
 	cout << " = " << sum;
 }
 
-void three_SumDivisor() {
+void SumDivisor_03() {
 	int n, sum{};
 	cin >> n;
 	for (int i = 1; i < n; i++) {
@@ -37,7 +37,7 @@ void three_SumDivisor() {
 	cout << " = " << sum;
 }
 
-void four_DisAge() {
+void DisAge_04() {
 	FILE* stream;
 	freopen_s(&stream, "input.txt.", "r", stdin);
 	int n;
@@ -58,7 +58,7 @@ void four_DisAge() {
 	cout << max - min;
 }
 
-void five_CalAge() {
+void CalAge_05() {
 	FILE* stream;
 	freopen_s(&stream, "input.txt.", "r", stdin);
 
@@ -95,7 +95,7 @@ void five_CalAge() {
 	printf("%d %c", age, gender);
 }
 
-void six_ExtractNum() {
+void ExtractNum_06() {
 	//FILE* stream;
 	//freopen_s(&stream, "input.txt", "r", stdin);
 	string str;
@@ -122,7 +122,7 @@ void six_ExtractNum() {
 	printf("%d\n%d", n, divisorCnt);
 }
 
-void answer_six_ExtractNum() {
+void answer_ExtractNum_06() {
 	//FILE* stream;
 	//freopen_s(&stream, "input.txt", "r", stdin);
 	char str[100];
@@ -142,7 +142,7 @@ void answer_six_ExtractNum() {
 	printf("%d\n%d", res, divisorCnt);
 }
 
-void seven_RestoreWord() {
+void RestoreWord_07() {
 	//FILE* stream;
 	//freopen_s(&stream, "input.txt", "r", stdin);
 	string str;
@@ -157,7 +157,7 @@ void seven_RestoreWord() {
 	cout << res;
 }
 
-void answer_seven_RestoreWord() {
+void answer_RestoreWord_07() {
 	FILE* stream;
 	freopen_s(&stream, "input.txt", "r", stdin);
 	//char str[101] = { 0 }, res[101] = { 0 };
@@ -176,7 +176,7 @@ void answer_seven_RestoreWord() {
 	printf("%s", res);
 }
 
-void eight_CorrectParenthesis() {
+void CorrectParenthesis_08() {
 	//FILE* stream;
 	//freopen_s(&stream, "input.txt", "r", stdin);
 
@@ -214,12 +214,12 @@ void eight_CorrectParenthesis() {
 	}
 }
 
-void answerStack_eight_CorrectParenthesis() {
+void answerStack_CorrectParenthesis_08() {
 
 }
 
 // 시간 초과 발생 (: 조건 1초 이내)
-void nine_DivisorOfAll() {
+void DivisorOfAll_09() {
 	//FILE* stream;
 	//freopen_s(&stream, "input.txt", "r", stdin);
 	int N = 0;
@@ -236,7 +236,7 @@ void nine_DivisorOfAll() {
 }
 
 int res[50001];
-void answer_nine_DivisorOfAll() {
+void answer_DivisorOfAll_09() {
 	//FILE* stream;
 	//freopen_s(&stream, "input.txt", "r", stdin);
 	int N = 0;
@@ -271,7 +271,7 @@ int digit_sum(int x) {
 	return sum;
 }
 
-void ten_SumOfDigit() {
+void SumOfDigit_10() {
 	//FILE* stream;
 	//freopen_s(&stream, "input.txt", "r", stdin);
 	int N;
@@ -297,7 +297,7 @@ void ten_SumOfDigit() {
 	printf("%d", res);
 }
 
-void answer_oneone_TotalNum() {
+void answer_TotalNum_10() {
 	//FILE* stream;
 	//freopen_s(&stream, "input.txt", "r", stdin);
 	int N{}, res{};
