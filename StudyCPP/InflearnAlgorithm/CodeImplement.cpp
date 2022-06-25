@@ -338,7 +338,19 @@ void TotalNum_12() {
 	printf("%d", res);
 }
 
+void answer_TotalNum_12() {
+	int N{}, res = 0, cnt = 1, digit = 9, sum = 0;
+	scanf_s("%d", &N, sizeof(N));
+	while (sum + digit < N) {
+		res += (cnt * digit);
+		sum += digit;
+		cnt++;
+		digit *= 10;
+	}
+	res += (N - sum) * cnt;
+	printf("%d", res);
+}
 
 int main() {
-	TotalNum_12();
+	answer_TotalNum_12();
 }
