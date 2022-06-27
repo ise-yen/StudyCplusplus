@@ -373,11 +373,27 @@ void MostUsedDigits_13() {
 	printf("%d", res);
 }
 
-int reverse(int x) {
+int reverse_simple(int x) {
 	int revX{};
 	string strX = to_string(x);
 	std::reverse(strX.begin(), strX.end());
 	revX = atoi(strX.c_str());
+	return revX;
+}
+
+int reverse_hard(int x) {
+	int revX{};
+	string strX;
+	while (x > 0) {
+		strX.push_back(x%10 + '0');
+		x /= 10;
+	}
+	int tmp = 1;
+	
+	for(int i = strX.length() - 1; i >= 0; i--){
+		revX += (strX[i]-'0') * tmp;
+		tmp *= 10;
+	}
 	return revX;
 }
 
@@ -398,7 +414,7 @@ void InvertedPrime_14() {
 	for (int i = 0; i < N; i++) {
 		int num{};
 		scanf_s("%d", &num);
-		int revX = reverse(num);
+		int revX = reverse_hard(num);
 		if (revX != 1 && isPrime(revX)) printf("%d ", revX);
 	}
 }
