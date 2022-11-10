@@ -141,6 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CodeImplement.cpp" />
+    <ClCompile Include="SWexAca.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt" />
