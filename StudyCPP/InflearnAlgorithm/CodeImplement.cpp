@@ -419,7 +419,6 @@ void InvertedPrime_14() {
 	}
 }
 
-
-int main() {
-	InvertedPrime_14();
+int main(int argc, char** argv)
+{
 }

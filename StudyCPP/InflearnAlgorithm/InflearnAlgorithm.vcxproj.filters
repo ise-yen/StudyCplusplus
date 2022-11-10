@@ -18,6 +18,9 @@
     <ClCompile Include="CodeImplement.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SWexAca.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="input.txt">
