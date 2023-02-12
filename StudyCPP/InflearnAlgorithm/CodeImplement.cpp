@@ -591,26 +591,27 @@ void COuntPrime_15_timeover()
 // 아나그램
 void Anagram_16()
 {
+	// 2개의 단어(길이 <= 100) 입력 받음
 	std::string str1{}, str2{};
-	scanf_s("%s %s", &str1, &str2);
-	if (str1.length() != str2.length())
-		printf("NO");
-	else
-	{
-		for (int i = 0; i < str1.length(); i++)
-		{
-			for (int j = 0; j < str2.length(); j++)
-			{
-				if (str2[j] != 0 && str1[i] == str2[j])
-				{
-					str2[j] = 0;
-					break;
-				}
+	getline(cin, str1);
+	getline(cin, str2);
+
+	bool isAnagram = true;
+	for (int i = 0; i < str1.length(); i++) {
+		for (int j = str2.length() - 1; j >= 0; j--) {
+			if (str1[i] == str2[j]) continue;
+			else {
+				isAnagram = false;
+				break;
 			}
 		}
 	}
+
+	if (isAnagram) printf("YES");
+	else printf("NO");
 }
 
 int main(int argc, char **argv)
 {
+	Anagram_16();
 }
