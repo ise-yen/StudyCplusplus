@@ -16,7 +16,6 @@ int solution0401(int num1, int num2)
 }
 
 // 중앙값 구하기
-
 int solution0402(vector<int> array)
 {
     int answer = 0;
