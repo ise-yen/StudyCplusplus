@@ -1,6 +1,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <iostream>
 
 using namespace std;
 
@@ -12,8 +13,24 @@ string solution0601(string my_string)
     return my_string;
 }
 
+// 직각삼각형 출력하기
+int main0602(void)
+{
+    int n;
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            cout << "*";
+        }
+        cout << "\n";
+    }
+    return 0;
+}
+
 // 짝수 홀수 개수 - 내꺼
-vector<int> solution(vector<int> num_list)
+vector<int> solution0603(vector<int> num_list)
 {
     vector<int> answer;
     int odd = 0, even = 0;
@@ -25,7 +42,7 @@ vector<int> solution(vector<int> num_list)
 }
 
 // 짝수 홀수 개수 - best
-vector<int> solution0602_best(vector<int> num_list)
+vector<int> solution0603_best(vector<int> num_list)
 {
     vector<int> answer(2, 0);
     for (int num : num_list)
@@ -34,7 +51,7 @@ vector<int> solution0602_best(vector<int> num_list)
 }
 
 // 문자 반복 출력하기
-string solution0603(string my_string, int n)
+string solution0604(string my_string, int n)
 {
     string answer = "";
     for (int i = 0; i < my_string.length(); i++)
